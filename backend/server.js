@@ -6,8 +6,7 @@ const fs = require('fs'); // File System module
 const path = require('path'); // Path module
 
 const app = express();
-const port = 5000; // We will run backend on port 5000
-
+const port = process.env.PORT || 5000;
 // --- Middleware ---
 
 // Enable CORS for our frontend (running on localhost:3000)
