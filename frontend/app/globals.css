@@ -1,0 +1,49 @@
+/* app/globals.css */
+
+/* Import Tailwind base styles if you are using it */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+/* Basic reset and background theme */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffe4e1; /* Light pink background (Misty Rose) */
+  color: #333;
+}
+
+/* --- Heart Animation (Feature 1) --- */
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Place it behind all content */
+}
+
+.heart {
+  position: absolute;
+  bottom: -50px; /* Start from below the screen */
+  color: #e63946; /* Red color for hearts */
+  font-size: 1.5rem; /* Size of the heart emoji */
+  opacity: 0.7;
+
+  /* Animation: name, duration, timing-function, delay, iteration-count, direction */
+  animation: moveUp 10s linear infinite;
+}
+
+/* Keyframes for the heart animation */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg); /* Move up and rotate */
+    opacity: 0;
+  }
+}
