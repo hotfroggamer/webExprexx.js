@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 // --- Middleware ---
 
 // Enable CORS for our frontend (running on localhost:3000)
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 
 // Serve static files (our images) from the 'public/images' directory
 // This allows URLs like http://localhost:5000/images/photo1.jpg
